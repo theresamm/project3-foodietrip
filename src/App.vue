@@ -12,10 +12,10 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Restaurants</a>
+          <a class="nav-link active" href="#" v-on:click="changePage('restaurants')">Restaurants</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">New Restaurant</a>
+          <a class="nav-link active" href="#" v-on:click="changePage('add')">New Restaurant</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">Log In</a>
@@ -24,11 +24,8 @@
     </div>
   </div>
 </nav>
-
-
-
-    <AllRestaurants/>
-    <NewRest/>
+    <AllRestaurants v-if="page === 'restaurants'"/>
+    <NewRest v-if="page === 'add'"/>
   </div>
 </template>
 
@@ -40,11 +37,20 @@ import NewRest from './components/NewRest.vue'
 export default {
   name: 'App',
   components: {
-    
     AllRestaurants,
     NewRest
-  }
-}
+  },
+  data:function (){
+    return{
+      'page':'restaurants'
+    }
+  },
+  methods: {
+    changePage(newPage){
+      this.page = newPage;
+    },
+  },
+};
 </script>
 
 <style>
