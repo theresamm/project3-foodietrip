@@ -2,7 +2,7 @@
   <div id="app">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Foodie Trip</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,31 +12,37 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link active" href="#">Restaurants</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link active" href="#">New Restaurant</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link active" href="#">Log In</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+
+    <AllRestaurants/>
+    <NewRest/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import AllRestaurants from './components/AllRestaurants.vue'
+import NewRest from './components/NewRest.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    
+    AllRestaurants,
+    NewRest
   }
 }
 </script>
