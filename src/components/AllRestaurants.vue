@@ -1,9 +1,18 @@
 <template>
 <div>
 <h2>Restaurants</h2>
-<ul>
-<li v-for="r in this.restaurants" v-bind:key="r._id">
-    {{r.name}} {{r.cuisine}} {{r.location}} {{r.rating}}
+<ul class="list-group">
+<li class="list-group-item" v-for="r in this.restaurants" v-bind:key="r._id">
+    {{r.name}} 
+    <ul>
+    {{r.cuisine}}
+    </ul>
+    <ul>
+    {{r.location}}
+    </ul>
+    <ul>
+    {{r.rating}}
+    </ul>
     </li>
 </ul>
 </div>
