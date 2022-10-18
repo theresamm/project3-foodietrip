@@ -26,32 +26,44 @@
 </nav>
 
 <div class="container">
-    <AllRestaurants v-if="page === 'restaurants'"/>
+    <AllRestaurants v-if="page === 'restaurants'"
+    v-on:edit-rest="onEditRest"/>
     <NewRest v-if="page === 'add'"/>
+    <EditRest v-if="page === 'edit'"
+    v-bind:reviewId="restaurantUpdate"
+    v-on:restaurant-update="changePage('restaurants')"
+    />
     </div>
   </div>
 </template>
 
 <script>
 
-import AllRestaurants from './components/AllRestaurants.vue'
-import NewRest from './components/NewRest.vue'
+import AllRestaurants from './components/AllRestaurants.vue';
+import NewRest from './components/NewRest.vue';
+import EditRest from './components/EditRest.vue'
 
 export default {
   name: 'App',
   components: {
     AllRestaurants,
-    NewRest
+    NewRest,
+    EditRest
   },
   data:function (){
     return{
-      'page':'restaurants'
+      'page':'restaurants',
+      restaurantUpdate: 0
     }
   },
   methods: {
     changePage(newPage){
       this.page = newPage;
     },
+    onEditRest(reviewId){
+      this.restaurantUpdate = reviewId;
+      this.changePage("edit");
+    }
   },
 };
 </script>

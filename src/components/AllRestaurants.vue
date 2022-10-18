@@ -13,6 +13,7 @@
     <ul>
     {{r.rating}}
     </ul>
+    <button class="mt-3 btn btn-primary btn-sm" v-on:click="edit(r._id)">Edit</button>
     </li>
 </ul>
 </div>
@@ -34,6 +35,11 @@ export default {
     async created(){
         const response = await axios.get(baseAPI + "restaurants");
         this.restaurants = response.data;
+    },
+    methods:{
+        edit(reviewId){
+            this.$emit("edit-rest", reviewId);
+        },
     },
 };
 </script>
