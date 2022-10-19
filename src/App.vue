@@ -28,7 +28,7 @@
 <div class="container">
     <AllRestaurants v-if="page === 'restaurants'"
     v-on:edit-rest="onEditRest"/>
-    <NewRest v-if="page === 'add'"/>
+    <NewRest v-if="page === 'add'" v-on:add-new-rest="changePage('restaurants')"/>
     <EditRest v-if="page === 'edit'"
     v-bind:reviewId="restaurantUpdate"
     v-on:restaurant-update="changePage('restaurants')"

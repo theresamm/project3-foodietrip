@@ -48,7 +48,7 @@ export default {
                 rating:this.rating
             };
             await axios.post(baseAPI+"restaurants", newRest)
-            alert("New Restaurant Added");
+            this.$emit('add-new-rest');
         },
     },
 }
