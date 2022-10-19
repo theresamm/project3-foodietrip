@@ -54,7 +54,7 @@ export default {
     return{
       'page':'restaurants',
       restaurantUpdate: 0
-    }
+    };
   },
   methods: {
     changePage(newPage){

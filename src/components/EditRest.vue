@@ -34,7 +34,7 @@ export default{
     props:["reviewId"],
     async created(){
         const response = await axios.get(baseAPI + "restaurants/" + this.reviewId);
-        this.restaurants  = response.data;   
+        this.restaurant  = response.data;   
     },
     data:function (){
         return{
@@ -55,7 +55,7 @@ export default{
             );
             this.$emit("restaurant-update");
         },
-    }
+    },
 };
 </script>
 
