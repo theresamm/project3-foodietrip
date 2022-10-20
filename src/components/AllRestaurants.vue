@@ -13,7 +13,7 @@
     <ul>
     {{r.rating}}
     </ul>
-    <button class="mt-3 btn btn-primary btn-sm" v-on:click="edit(r._id)">Edit</button>
+    <button class="mt-3 btn btn-primary btn-sm" v-on:click="edit(r._id)">Edit</button><button class="mt-3 ms-2 btn btn-danger btn-sm" v-on:click="del(r._id)">Delete</button>
     </li>
 </ul>
 </div>
@@ -39,6 +39,9 @@ export default {
     methods:{
         edit(reviewId){
             this.$emit("edit-rest", reviewId);
+        },
+        del(reviewId){
+            this.$emit("delete-rest", reviewId);
         },
     },
 };

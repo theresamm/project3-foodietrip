@@ -27,11 +27,15 @@
 
 <div class="container">
     <AllRestaurants v-if="page === 'restaurants'"
-    v-on:edit-rest="onEditRest"/>
+    v-on:edit-rest="onEditRest" v-on:delete-rest="onDeleteRest"/>
     <NewRest v-if="page === 'add'" v-on:add-new-rest="changePage('restaurants')"/>
     <EditRest v-if="page === 'edit'"
     v-bind:reviewId="restaurantUpdate"
     v-on:restaurant-update="changePage('restaurants')"
+    />
+    <DeleteRest v-if="page === 'delete'"
+    v-bind:reviewId="restaurantDelete"
+    v-on:restaurant-delete="changePage('restaurants')"
     />
     </div>
   </div>
@@ -41,19 +45,22 @@
 
 import AllRestaurants from './components/AllRestaurants.vue';
 import NewRest from './components/NewRest.vue';
-import EditRest from './components/EditRest.vue'
+import EditRest from './components/EditRest.vue';
+import DeleteRest from './components/DeleteRest.vue'
 
 export default {
   name: 'App',
   components: {
     AllRestaurants,
     NewRest,
-    EditRest
+    EditRest,
+    DeleteRest
   },
   data:function (){
     return{
       'page':'restaurants',
-      restaurantUpdate: 0
+      restaurantUpdate: 0,
+      restaurantDelete: 0
     };
   },
   methods: {
@@ -63,7 +70,11 @@ export default {
     onEditRest(reviewId){
       this.restaurantUpdate = reviewId;
       this.changePage("edit");
-    }
+    },
+    onDeleteRest(reviewId){
+      this.restaurantDelete = reviewId;
+      this.changePage("delete");
+    },
   },
 };
 </script>
