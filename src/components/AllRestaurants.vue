@@ -1,8 +1,10 @@
 <template>
 <div>
 <h2>Restaurants</h2>
+<input type="text" v-model="search"/>
+<button class="submit mt-3 ms-2" v-on:click="searchRes(r._id)">Search</button>
 <ul class="list-group">
-<li class="list-group-item" v-for="r in this.restaurants" v-bind:key="r._id">
+<li class="list-group-item" v-for="r in searchRes" v-bind:key="r._id">
     {{r.name}} 
     <ul>
     {{r.cuisine}}
@@ -30,6 +32,7 @@ export default {
     data: function (){
         return{
             restaurants: [],
+            search: "",
         };
     },
     async created(){
@@ -42,6 +45,13 @@ export default {
         },
         del(reviewId){
             this.$emit("delete-rest", reviewId);
+        },
+    },
+    computed:{
+        searchRes(){
+            return this.restaurants.filter((r)=>
+            r.name.toLowerCase().includes(this.search.toLowerCase())
+            );
         },
     },
 };

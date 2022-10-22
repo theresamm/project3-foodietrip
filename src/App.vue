@@ -9,10 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#" v-on:click="changePage('restaurants')">Restaurants</a>
+          <a class="nav-link active" href="#" v-on:click="changePage('restaurants')">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#" v-on:click="changePage('add')">New Restaurant</a>
