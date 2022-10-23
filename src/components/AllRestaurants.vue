@@ -3,21 +3,23 @@
 <h2>Restaurants</h2>
 <input type="text" v-model="search"/>
 <button class="submit mt-3 ms-2" v-on:click="searchRes(r._id)">Search</button>
-<ul class="list-group">
-<li class="list-group-item" v-for="r in searchRes" v-bind:key="r._id">
-    {{r.name}} 
-    <ul>
-    {{r.cuisine}}
-    </ul>
-    <ul>
-    {{r.location}}
-    </ul>
-    <ul>
-    {{r.rating}}
-    </ul>
-    <button class="mt-3 btn btn-primary btn-sm" v-on:click="edit(r._id)">Edit</button><button class="mt-3 ms-2 btn btn-danger btn-sm" v-on:click="del(r._id)">Delete</button>
-    </li>
-</ul>
+
+<div class="p-3"></div>
+<div class="card mb-3" v-for="r in searchRes" v-bind:key="r._id">
+  <div class="row g-0">
+    <div class="col-md-5">
+      <img v-bind:src="r.image" class="img-fluid rounded-start" alt="">
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <h4 class="card-title">{{r.name}}</h4>
+        <h5 class="card-text">{{r.cuisine}}<br>{{r.location}}</h5>
+        <h5><span class="badge bg-success">Rating: {{r.rating}}</span></h5>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 </template>
 
