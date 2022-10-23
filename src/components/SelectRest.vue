@@ -1,16 +1,28 @@
 <template>
 
 <div class="rest-selected">
-<div class="card m-3" v-if="restaurants !== null">
+<div class="card" v-if="restaurants !== null">
+<div class="p-2"></div>
+<h1 class="card-title">{{restaurants.name}}</h1><h4><span class="badge bg-success">Rating: {{restaurants.rating}}</span></h4>
+<div class="p-2"></div>
   <img v-bind:src="restaurants.image" class="card-img-top" alt="">
   <div class="card-body">
-    <h5 class="card-title">{{restaurants.name}}</h5>
-    <p class="card-text">{{restaurants.cuisine}}<br>{{restaurants.location}}</p>
+    <h5>Cuisines: <span class="badge rounded-pill bg-info text-dark">{{restaurants.cuisine}}</span></h5>
+    <h5 class="card-text">Location: {{restaurants.location}}</h5>
+    <h5 class="card-text">Bestsellers: {{restaurants.bestseller}}</h5>
+    <h5 class="card-text">Average Cost: P{{restaurants.average_cost}}</h5>
+    <h5 class="card-text">Store Hours: {{restaurants.store_hours}}</h5>
+    <h5 class="card-text">Features: {{restaurants.features}}</h5>
+    <h5>Meals: <span class v-for="(meals, index) in restaurants.meals" :key="index">{{meals}}, </span></h5>
+    <h5>Contacts: <span class v-for="(contact, index) in restaurants.contact" :key="index">{{contact}} </span></h5>
+  <h5 class="card-text">Features: {{restaurants.features}}</h5>
+  
   </div>
+
+
   <ul class="list-group list-group-flush">
     <li class="list-group-item">An item</li>
     <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
   </ul>
   <div class="card-body">
     <li class="list-group-item">An item</li>
@@ -31,7 +43,7 @@ export default {
     async created(){
         const response = await axios.get(baseAPI + "restaurants/" + this.reviewId);
         this.restaurants = response.data;
-    },
+        },
     data: function (){
         return{
             restaurants: null,
@@ -42,4 +54,22 @@ export default {
 </script>
 
 <style>
+.card-title{
+    text-align:center;
+}
+.card{
+    border-radius:10px;
+     display: flex;
+  justify-content: center;
+    align-items: center;
+}
+.card-img-top{
+    max-width: 60%;
+    height: auto;
+    position: relative;
+    align-items: center;
+    border-radius:10px;
+}
+
+
 </style>
