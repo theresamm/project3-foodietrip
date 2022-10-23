@@ -24,7 +24,7 @@
 
 <div class="container">
     <AllRestaurants v-if="page === 'restaurants'"
-    v-on:edit-rest="onEditRest" v-on:delete-rest="onDeleteRest"/>
+    v-on:edit-rest="onEditRest" v-on:delete-rest="onDeleteRest" v-on:select-rest="onSelectRest"/>
     <NewRest v-if="page === 'add'" v-on:add-new-rest="changePage('restaurants')"/>
     <EditRest v-if="page === 'edit'"
     v-bind:reviewId="restaurantUpdate"
@@ -34,6 +34,7 @@
     v-bind:reviewId="restaurantDelete"
     v-on:restaurant-delete="changePage('restaurants')"
     />
+    <SelectRest v-if="page === 'select'" v-bind:reviewId="restaurantSelect"/>
     </div>
   </div>
 </template>
@@ -43,7 +44,8 @@
 import AllRestaurants from './components/AllRestaurants.vue';
 import NewRest from './components/NewRest.vue';
 import EditRest from './components/EditRest.vue';
-import DeleteRest from './components/DeleteRest.vue'
+import DeleteRest from './components/DeleteRest.vue';
+import SelectRest from './components/SelectRest.vue'
 
 export default {
   name: 'App',
@@ -51,7 +53,8 @@ export default {
     AllRestaurants,
     NewRest,
     EditRest,
-    DeleteRest
+    DeleteRest,
+    SelectRest
   },
   data:function (){
     return{
@@ -71,6 +74,10 @@ export default {
     onDeleteRest(reviewId){
       this.restaurantDelete = reviewId;
       this.changePage("delete");
+    },
+    onSelectRest(reviewId){
+      this.restaurantSelect = reviewId;
+      this.changePage("select");
     },
   },
 };

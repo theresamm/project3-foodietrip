@@ -12,9 +12,10 @@
     </div>
     <div class="col-md-4">
       <div class="card-body">
-        <h4 class="card-title">{{r.name}}</h4>
+        <h4><a class="card-title text-black" v-on:click="sel(r._id)" href="#">{{r.name}}</a></h4>
         <h5 class="card-text">{{r.cuisine}}<br>{{r.location}}</h5>
         <h5><span class="badge bg-success">Rating: {{r.rating}}</span></h5>
+        <button class="mt-3 btn btn-primary btn-sm" v-on:click="edit(r._id)">Edit</button><button class="mt-3 ms-2 btn btn-danger btn-sm" v-on:click="del(r._id)">Delete</button>
       </div>
     </div>
   </div>
@@ -47,6 +48,9 @@ export default {
         },
         del(reviewId){
             this.$emit("delete-rest", reviewId);
+        },
+        sel(reviewId){
+            this.$emit("select-rest", reviewId);
         },
     },
     computed:{
