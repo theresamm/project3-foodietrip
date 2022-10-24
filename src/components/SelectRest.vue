@@ -44,6 +44,8 @@ export default {
         const response = await axios.get(baseAPI + "restaurants/" + this.reviewId);
         this.restaurants = response.data;
         },
+    
+
     data: function (){
         return{
             restaurants: null,
