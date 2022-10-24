@@ -36,7 +36,7 @@
 
 <div class="mt-3">
 <label class="form-labels">Average Cost : </label>
-<input type="text" class="form-control" v-model="averga_cost" placeholder="Average Cost for 2 persons meal"/>
+<input type="text" class="form-control" v-model="average_cost" placeholder="Average Cost for 2 persons meal"/>
 </div>
 
 <div class="mt-3">
@@ -97,7 +97,11 @@ export default {
             image:"",
             bestseller:"",
             meals:[],
+            average_cost:"",
+            store_hours:"",
+            features:"",
             parking:"",
+            contact:[],
             rating:""
         };
     },
@@ -110,7 +114,11 @@ export default {
                 image:this.image,
                 bestseller:this.bestseller,
                 meals:this.meals,
+                average_cost:this.average_cost,
+                store_hours:this.store_hours,
+                features:this.features,
                 parking:this.parking,
+                contact:this.contact,
                 rating:this.rating
             };
             await axios.post(baseAPI+"restaurants", newRest)
