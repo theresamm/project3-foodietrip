@@ -19,14 +19,6 @@
   
   </div>
 
-
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-  </ul>
-  <div class="card-body">
-    <li class="list-group-item">An item</li>
-  </div>
 </div>
 </div>
 

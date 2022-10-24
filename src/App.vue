@@ -14,9 +14,6 @@
         <li class="nav-item">
           <a class="nav-link active" href="#" v-on:click="changePage('add')">New Restaurant</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Log In</a>
-        </li>
       </ul>
     </div>
   </div>
@@ -45,7 +42,8 @@ import AllRestaurants from './components/AllRestaurants.vue';
 import NewRest from './components/NewRest.vue';
 import EditRest from './components/EditRest.vue';
 import DeleteRest from './components/DeleteRest.vue';
-import SelectRest from './components/SelectRest.vue'
+import SelectRest from './components/SelectRest.vue';
+
 
 export default {
   name: 'App',
@@ -54,7 +52,8 @@ export default {
     NewRest,
     EditRest,
     DeleteRest,
-    SelectRest
+    SelectRest,
+    
   },
   data:function (){
     return{
