@@ -1,5 +1,6 @@
 <template>
 
+<div>
 <div class="rest-selected">
 <div class="card" v-if="restaurants !== null">
 <div class="p-2"></div>
@@ -16,10 +17,22 @@
     <h5>Meals: <span class v-for="(meals, index) in restaurants.meals" :key="index">{{meals}}, </span></h5>
     <h5>Contacts: <span class v-for="(contact, index) in restaurants.contact" :key="index">{{contact}} </span></h5>
   <h5 class="card-text">Features: {{restaurants.features}}</h5>
-  
-  </div>
-
 </div>
+</div>
+</div>
+
+<div class="rest-comments">
+<div class="card" v-if="restaurants !== null">
+<div class="p-2"></div>
+<div class="card-body">
+    <h3>Comments:</h3>
+    <h5>Comments: <span class v-for="(comments, index) in restaurants.reviewer_name" :key="index">{reviewer_name}}, </span></h5>
+    <h5 class="card-text">Name: {{comments.reviewer_name}}</h5>
+    <h5 class="card-text">Comment: {{restaurants.comments}}</h5>
+</div>
+</div>
+</div>
+
 </div>
 
 </template>
@@ -35,12 +48,15 @@ export default {
     async created(){
         const response = await axios.get(baseAPI + "restaurants/" + this.reviewId);
         this.restaurants = response.data;
+    
+        
         },
     
 
     data: function (){
         return{
             restaurants: null,
+            comments:{}
         };
     },
     
