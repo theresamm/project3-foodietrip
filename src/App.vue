@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg">
   <div class="navbar-bar container-fluid">
-    <a class="navbar-brand" href="#">Foodie Trip</a>
+    <a class="navbar-brand" href="#"><img src="./assets/icon.png"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,6 +21,7 @@
     </div>
   </div>
 </nav>
+
 
 <div class="container">
     <AllRestaurants v-if="page === 'restaurants'"
@@ -89,16 +90,40 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+
   margin-top: 0px;
   
+}
+.navbar.navbar-expand-lg{
+  margin: 0px !important;
+  padding: 0px;
 }
 .navbar-bar{
   background-color:#ef4f5f;
   margin-top: 0px;
 }
+.navbar-brand{
+  font-family: Trebuchet MS,serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 4px;
+  margin:4px;
+  color: white !important;
+}
+.navbar-brand>img{
+  height:50px;
+  padding:0px;
+  margin-right:20px;
+}
+#navbarNav{
+  font-family: Trebuchet MS,serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white !important;
+}
+.nav-link{
+color: white !important;
+}
+
 
 </style>

@@ -1,6 +1,9 @@
 <template>
 <div>
-<h2>Restaurants</h2>
+
+<div class="hero-image"><img src="../assets/restaurant.jpg">
+<div class="hero-text"><h1>Foodie Trip</h1></div>
+</div>
 <input type="text" v-model="search"/>
 <button class="submit mt-3 ms-2" v-on:click="searchRes(r._id)">Search</button>
 
@@ -64,4 +67,25 @@ export default {
 </script>
 
 <style>
+.hero-image>img{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)) !important;
+  max-width: 100%;
+  max-height: 150vh;
+  height:auto;
+  display:block;
+  backround-position: center !important;
+  background-repeat: no-repeat;
+  background-size: cover!important;
+  position:relative;
+  border-radius:20px;
+}
+.hero-text{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: Trebuchet MS,serif;
+}
 </style>
