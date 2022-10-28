@@ -78,6 +78,7 @@
 </div>
 </div>
 
+<p class="text-danger" v-if="errors.length"><b>Please fill out all fields to proceed</b></p>
 <button class="mt-3 btn btn-primary" v-on:click="process">Create</button>
 </div>
 </template>
@@ -102,11 +103,16 @@ export default {
             features:"",
             parking:"",
             contact:[],
-            rating:""
+            rating:"",
+            errors: []
         };
     },
     methods:{
         async process(){
+            this.errors = [];
+            if (!this.name || !this.cuisine || !this.location || !this.image || !this.bestseller || !this.meals || !this.average_cost || !this.store_hours || !this.features || !this.parking || !this.contact || !this.rating){
+                this.errors.push("Required fields");
+            } else {
             const newRest = {
                 name: this.name,
                 cuisine: this.cuisine,
@@ -114,15 +120,16 @@ export default {
                 image:this.image,
                 bestseller:this.bestseller,
                 meals:this.meals,
-                average_cost:this.average_cost,
+                average_cost:parseInt(this.average_cost),
                 store_hours:this.store_hours,
                 features:this.features,
                 parking:this.parking,
                 contact:this.contact,
-                rating:this.rating
+                rating:parseInt(this.rating)
             };
             await axios.post(baseAPI+"restaurants", newRest)
             this.$emit('add-new-rest');
+            }
         },
     },
 }
