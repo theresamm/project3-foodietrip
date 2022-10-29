@@ -125,5 +125,10 @@ export default {
 color: white !important;
 }
 
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+
 
 </style>

@@ -2,10 +2,14 @@
 <div>
 
 <div class="hero-image"><img src="../assets/restaurant.jpg">
-<div class="hero-text"><h1>Foodie Trip</h1></div>
+<div class="hero-text"><h1>Foodie Trip</h1>
+<h4>Discover the best restaurants in the Philippines</h4>
+<div class="search-name">
+<input type="text" v-model="search" placeholder="Search Restaurant Name"/>
 </div>
-<input type="text" v-model="search"/>
-<button class="submit mt-3 ms-2" v-on:click="searchRes(r._id)">Search</button>
+</div>
+</div>
+
 
 <div class="p-3"></div>
 <div class="card mb-3" v-for="r in searchRes" v-bind:key="r._id">
@@ -71,21 +75,32 @@ export default {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)) !important;
   max-width: 100%;
   max-height: 150vh;
-  height:auto;
+  
   display:block;
   backround-position: center !important;
-  background-repeat: no-repeat;
-  background-size: cover!important;
   position:relative;
-  border-radius:20px;
+  border-radius:10px;
 }
-.hero-text{
-  text-align: center;
+
+.container .hero-text{
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50% !important;
+  left: 50% !important;
   transform: translate(-50%, -50%);
   color: white;
   font-family: Trebuchet MS,serif;
+  text-align: center;
+  display: auto;
 }
+
+.search-name{
+    font-family: Trebuchet MS, sans-serif;
+    display: block;
+    font-size:20px;
+    border:none;
+    position: center;
+    border-radius:20px;
+}
+
+
 </style>
