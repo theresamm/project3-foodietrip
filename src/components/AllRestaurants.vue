@@ -1,8 +1,9 @@
 <template>
 <div>
 
-<div class="hero-image"><img src="../assets/restaurant.jpg">
-<div class="hero-text"><h1>Foodie Trip</h1>
+<div class="banner"><img src="../assets/restaurant.jpg">
+<div class="banner-text">
+<h1>Foodie Trip</h1>
 <h4>Discover the best restaurants in the Philippines</h4>
 <div class="search-name">
 <input type="text" v-model="search" placeholder="Search Restaurant Name"/>
@@ -20,9 +21,11 @@
     <div class="col-md-4">
       <div class="card-body">
         <h4><a class="card-title text-black" v-on:click="sel(r._id)" href="#">{{r.name}}</a></h4>
-        <h5 class="card-text">{{r.cuisine}}<br>{{r.location}}</h5>
-        <h5><span class="badge bg-success">Rating: {{r.rating}}</span></h5>
-       
+        <h5>Cuisine: <span class="badge rounded-pill bg-info text-dark badge-cuisine">{{r.cuisine}}</span></h5>
+        <h5 class="card-text">Location: {{r.location}}</h5>
+        <h5><span class>Bestsellers: {{r.bestseller}}</span></h5>
+        <h5 class="card-text">Average Cost: P{{r.average_cost}}</h5>
+        <h4><span class="badge bg-success badge-rating">Rating: {{r.rating}}</span></h4> 
       </div>
     </div>
   </div>
@@ -71,26 +74,19 @@ export default {
 </script>
 
 <style>
-.hero-image>img{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3)) !important;
-  max-width: 100%;
-  max-height: 150vh;
-  
-  display:block;
-  backround-position: center !important;
-  position:relative;
-  border-radius:10px;
-}
-
-.container .hero-text{
-  position: absolute;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-family: Trebuchet MS,serif;
+.banner{
+  position: relative;
   text-align: center;
-  display: auto;
+  color: white;
+}
+.banner>img{
+  width: 100%;
+}
+.banner-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .search-name{
@@ -102,5 +98,11 @@ export default {
     border-radius:20px;
 }
 
+.badge-rating{
+  position: absolute;
+  top:0;
+  right: 0px;
+  z-index: 10;
+}
 
 </style>

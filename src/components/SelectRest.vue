@@ -8,7 +8,7 @@
 <div class="p-2"></div>
   <img v-bind:src="restaurants.image" class="card-img-top" alt="">
   <div class="card-body">
-    <h5>Cuisines: <span class="badge rounded-pill bg-info text-dark">{{restaurants.cuisine}}</span></h5>
+    <h5>Cuisine: <span class="badge rounded-pill bg-info text-dark">{{restaurants.cuisine}}</span></h5>
     <h5 class="card-text">Location: {{restaurants.location}}</h5>
     <h5 class="card-text">Bestsellers: {{restaurants.bestseller}}</h5>
     <h5 class="card-text">Average Cost: P{{restaurants.average_cost}}</h5>
