@@ -11,6 +11,27 @@
 </div>
 </div>
 
+<div class="p-3"></div>
+
+<div class="filter-select">
+<form class="row g-2">
+<div class="col-md-5">
+<label> Select cuisine: </label>
+<select class="form-select" v-model="cuisine">
+<option value="">Select Cuisine</option>
+<option value="Filipino">Filipino</option>
+<option value="American">American</option>
+<option value="Italian">Italian</option>
+<option value="French">French</option>
+<option value="Japanese">Japanese</option>
+<option value="Korean">Korean</option>
+</select>
+</div>
+
+</form>
+</div>
+
+
 
 <div class="p-3"></div>
 <div class="card mb-3" v-for="r in searchRes" v-bind:key="r._id">
@@ -47,6 +68,7 @@ export default {
         return{
             restaurants: [],
             search: "",
+            cuisine:"",
         };
     },
     async created(){
@@ -65,10 +87,14 @@ export default {
         },
     },
     computed:{
-        searchRes(){
-            return this.restaurants.filter((r)=>
-            r.name.toLowerCase().includes(this.search.toLowerCase())
-            );
+        searchRes: function(){
+           let selection = this.restaurants.filter((r)=>{
+            return r.name.toLowerCase().includes(this.search.toLowerCase())
+            });
+            selection = selection.filter((r)=>{
+            return r.cuisine.includes(this.cuisine)
+            });
+            return selection;
         },
     },
 };
@@ -118,5 +144,15 @@ export default {
   bottom:10px;
   right: 10px;
   z-index: 10;
+}
+
+
+.form-select{
+  position: center;
+   text-align: center;
+}
+
+.card:hover{
+transform: scale(1.1);
 }
 </style>
