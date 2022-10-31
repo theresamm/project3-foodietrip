@@ -14,9 +14,6 @@
         <li class="nav-item">
           <a class="nav-link active" href="#" v-on:click="changePage('add')">New Restaurant</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#" v-on:click="changePage('login')">Log In</a>
-        </li>
       </ul>
     </div>
   </div>
@@ -36,7 +33,7 @@
     v-on:restaurant-delete="changePage('restaurants')"
     />
     <SelectRest v-if="page === 'select'" v-bind:reviewId="restaurantSelect"/>
-     <LogIn v-if="page === 'login'" v-on:edit-rest="onEditRest" v-on:delete-rest="onDeleteRest" v-on:select-rest="onSelectRest"/>
+    
     </div>
   </div>
 </template>
@@ -48,7 +45,7 @@ import NewRest from './components/NewRest.vue';
 import EditRest from './components/EditRest.vue';
 import DeleteRest from './components/DeleteRest.vue';
 import SelectRest from './components/SelectRest.vue';
-import LogIn from './components/LogIn.vue';
+
 
 
 export default {
@@ -59,7 +56,7 @@ export default {
     EditRest,
     DeleteRest,
     SelectRest,
-    LogIn,
+    
   },
   data:function (){
     return{

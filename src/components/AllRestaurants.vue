@@ -26,6 +26,7 @@
         <h5><span class>Bestsellers: {{r.bestseller}}</span></h5>
         <h5 class="card-text">Average Cost: P{{r.average_cost}}</h5>
         <h4><span class="badge bg-success badge-rating">Rating: {{r.rating}}</span></h4> 
+        <button class="mt-3 btn btn-primary btn-sm btn-edit" v-on:click="edit(r._id)">Edit</button><button class="mt-3 ms-2 btn btn-danger btn-sm btn-delete" v-on:click="del(r._id)">Delete</button>
       </div>
     </div>
   </div>
@@ -105,4 +106,17 @@ export default {
   z-index: 10;
 }
 
+.btn-edit{
+  position: absolute;
+  bottom:10px;
+  right: 80px;
+  z-index: 10;
+}
+
+.btn-delete{
+  position: absolute;
+  bottom:10px;
+  right: 10px;
+  z-index: 10;
+}
 </style>

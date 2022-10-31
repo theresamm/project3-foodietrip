@@ -78,7 +78,7 @@
 </div>
 </div>
 
-<button class="mt-3 btn btn-primary" v-on:click="process">Delete</button>
+<button class="mt-3 btn btn-danger" v-on:click="process">Delete</button>
 
 </div>
 
