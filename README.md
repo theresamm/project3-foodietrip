@@ -1,5 +1,5 @@
 <h1>FOODIE TRIP</h1>
-<img src="/src/assets/foodietrip.jpg">
+<img src="src/assets/foodietrip.jpg">
 
 <h2>PROJECT SUMMARY</h2>
 <p> The Foodie Trip website aims to share and provide information to the users on the restaurants and food establishments in the Philippines. It enables the users to explore and search for new restaurants and to share their experiences and relative information for other users.</p>
@@ -50,4 +50,8 @@
 
 <h4>Skeleton:</h4>
 
-Wireframe diagrams can be found <a href = >here</a>
+<p>Wireframe diagrams can be found <a href = >here</a></p>
+
+<h4>Surface:</h4>
+<li>The website features a banner on the upper portion of the web page which also includes a search bar to easily find for the restaurants. It also displays three colors namely red, white and black. The red and white color are mainly used on the navigation bar. While the color black is used on the important details on the webpage. The app uses the font Trebuchet MS for all the details in the website as it looks clean and modern.</li>
+
