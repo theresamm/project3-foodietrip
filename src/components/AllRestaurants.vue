@@ -1,7 +1,7 @@
 <template>
 <div>
 
-<div class="banner"><img src="../assets/restaurant.jpg">
+<div class="banner"><img src="../assets/restaurant.jpg" alt="Photo by Antony Trivet - Pexels.com">
 <div class="banner-text">
 <h1>Foodie Trip</h1>
 <h4>Discover the best restaurants in the Philippines</h4>
