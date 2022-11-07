@@ -4,11 +4,11 @@
 <div class="rest-selected">
 <div class="card" v-if="restaurants !== null">
 <div class="p-2"></div>
-<h1 class="card-title">{{restaurants.name}}</h1><h4><span class="badge bg-success">Rating: {{restaurants.rating}}</span></h4>
+<h1 class="card-title">{{restaurants.name}}</h1><h4><span class="badge badge-rate">Rating: {{restaurants.rating}}</span></h4>
 <div class="p-2"></div>
   <img v-bind:src="restaurants.image" class="card-img-top" alt="">
   <div class="card-body">
-    <h5>Cuisine: <span class="badge rounded-pill bg-info text-dark">{{restaurants.cuisine}}</span></h5>
+    <h5>Cuisine: <span class="badge badge-cuisine rounded-pill">{{restaurants.cuisine}}</span></h5>
     <h5 class="card-text">Location: {{restaurants.location}}</h5>
     <h5 class="card-text">Bestsellers: {{restaurants.bestseller}}</h5>
     <h5 class="card-text">Average Cost: P{{restaurants.average_cost}}</h5>
@@ -58,9 +58,12 @@ export default {
 }
 .card{
     border-radius:10px;
-     display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    border-style:solid !important;
+    border-color:#FAC7CC !important;
+    border-width: 5px !important;
 }
 .card-img-top{
     max-width: 60%;
@@ -69,6 +72,14 @@ export default {
     align-items: center;
     border-radius:10px;
 }
+.badge-rate{
+    align-items: center !important;
+    position: relative;
+  z-index: 10;
+  background-color: #fcfe9c;
+  color: #EF4F5F !important;
+  font-weight: bold !important;
 
+}
 
 </style>

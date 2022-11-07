@@ -16,8 +16,8 @@
 <div class="filter-select">
 <form class="row g-2">
 <div class="col-md-5">
-<label> Select cuisine: </label>
-<select class="form-select" v-model="cuisine">
+<label> Select type of cuisine: </label>
+<select class="filter-cuisine form-select" v-model="cuisine">
 <option value="">Select Cuisine</option>
 <option value="Filipino">Filipino</option>
 <option value="American">American</option>
@@ -34,20 +34,21 @@
 
 
 <div class="p-3"></div>
+
 <div class="card mb-3" v-for="r in searchRes" v-bind:key="r._id">
-  <div class="row g-0">
+  <div class="card-border row g-0">
     <div class="col-md-5">
       <img v-bind:src="r.image" class="img-fluid rounded-start" alt="">
     </div>
     <div class="col-md-4">
       <div class="card-body">
-        <h4><a class="card-title text-black" v-on:click="sel(r._id)" href="#">{{r.name}}</a></h4>
-        <h5>Cuisine: <span class="badge rounded-pill bg-info text-dark badge-cuisine">{{r.cuisine}}</span></h5>
+        <h4><a class="card-title" v-on:click="sel(r._id)" href="#">{{r.name}}</a></h4>
+        <h5>Cuisine: <span class="badge rounded-pill badge-cuisine">{{r.cuisine}}</span></h5>
         <h5 class="card-text">Location: {{r.location}}</h5>
         <h5><span class>Bestsellers: {{r.bestseller}}</span></h5>
         <h5 class="card-text">Average Cost: P{{r.average_cost}}</h5>
-        <h4><span class="badge bg-success badge-rating">Rating: {{r.rating}}</span></h4> 
-        <button class="mt-3 btn btn-primary btn-sm btn-edit" v-on:click="edit(r._id)">Edit</button><button class="mt-3 ms-2 btn btn-danger btn-sm btn-delete" v-on:click="del(r._id)">Delete</button>
+        <h4><span class="badge badge-rating">Rating: {{r.rating}}</span></h4> 
+        <button class="mt-3 btn btn-sm btn-edit" v-on:click="edit(r._id)">Edit</button><button class="mt-3 ms-2 btn btn-sm btn-delete" v-on:click="del(r._id)">Delete</button>
       </div>
     </div>
   </div>
@@ -130,6 +131,9 @@ export default {
   top:0;
   right: 0px;
   z-index: 10;
+  background-color: #fcfe9c;
+  color: #EF4F5F !important;
+  font-weight: bold !important;
 }
 
 .btn-edit{
@@ -137,6 +141,11 @@ export default {
   bottom:10px;
   right: 80px;
   z-index: 10;
+  border-style:solid !important;
+  border-color:#EF4F5F !important;
+  border-width: 2px !important;
+  color: #EF4F5F !important;
+  font-weight: bold !important;
 }
 
 .btn-delete{
@@ -144,6 +153,11 @@ export default {
   bottom:10px;
   right: 10px;
   z-index: 10;
+  border-style:solid !important;
+  border-color:#EF4F5F !important;
+  background-color: #EF4F5F !important;
+  color: white !important;
+  font-weight: bold !important;
 }
 
 
@@ -154,5 +168,40 @@ export default {
 
 .card:hover{
 transform: scale(1.1);
+}
+
+.card-border{
+  border-style:solid;
+  border-color:#FAC7CC;
+ 
+}
+
+.badge-cuisine{
+background-color: #EF4F5F !important;
+}
+
+.card-title{
+color: #EF4F5F;
+}
+
+.card-title:hover{
+  color: white;
+  background-color: #EF4F5F;
+  padding: 5px;
+}
+
+.filter-select{
+  color: #EF4F5F;
+  font-weight: bold;
+  
+}
+
+.filter-cuisine{
+  border-style:solid !important;
+  border-color:#FAC7CC !important;
+  background-color: #EF4F5F !important;
+  color: white !important;
+  font-weight: bold !important;
+  border-width: 2px !important;
 }
 </style>

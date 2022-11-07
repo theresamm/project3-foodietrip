@@ -50,7 +50,7 @@
 
 <h4>Skeleton:</h4>
 
-<p>Wireframe diagrams can be found <a href = >here</a></p>
+<p>Wireframe diagrams can be found <a href = /src/assets/wireframe.png>here</a></p>
 
 <h4>Surface:</h4>
 <li>The website features a banner on the upper portion of the web page which also includes a search bar to easily find for the restaurants. It also displays three colors namely red, white and black. The red and white color are mainly used on the navigation bar. While the color black is used on the important details on the webpage. The app uses the font Trebuchet MS for all the details in the website as it looks clean and modern.</li>
