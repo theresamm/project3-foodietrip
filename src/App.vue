@@ -23,14 +23,18 @@
 <div class="container">
     <AllRestaurants v-if="page === 'restaurants'"
     v-on:edit-rest="onEditRest" v-on:delete-rest="onDeleteRest" v-on:select-rest="onSelectRest"/>
-    <NewRest v-if="page === 'add'" v-on:add-new-rest="changePage('restaurants')"/>
+    <NewRest v-if="page === 'add'" v-on:add-new-rest="changePage('restaurants')"
+    v-on:restaurant-cancel="changePage('restaurants')"
+    />
     <EditRest v-if="page === 'edit'"
     v-bind:reviewId="restaurantUpdate"
     v-on:restaurant-update="changePage('restaurants')"
+    v-on:restaurant-cancel="changePage('restaurants')"
     />
     <DeleteRest v-if="page === 'delete'"
     v-bind:reviewId="restaurantDelete"
     v-on:restaurant-delete="changePage('restaurants')"
+    v-on:restaurant-cancel="changePage('restaurants')"
     />
     <SelectRest v-if="page === 'select'" v-bind:reviewId="restaurantSelect"/>
     

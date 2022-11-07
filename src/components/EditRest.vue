@@ -79,7 +79,8 @@
 </div>
 
 
-<button class="mt-3 btn btn-primary" v-on:click="process">Update</button>
+<button class="mt-3 btn btn-update" v-on:click="process">Update</button>
+<button class="mt-3 btn btn-cancel" v-on:click="cancelButton">Cancel</button>
 
 </div>
 </template>
@@ -121,9 +122,20 @@ export default{
             );
             this.$emit("restaurant-update");
         },
+        cancelButton: function(){
+            this.$emit("restaurant-cancel");
+        }
     },
 };
 </script>
 
-<style scoped>
+<style>
+.btn-update{
+    z-index: 10;
+    border-style:solid !important;
+    border-color:#EF4F5F !important;
+    border-width: 2px !important;
+    color: #EF4F5F !important;
+    font-weight: bold !important;
+}
 </style>

@@ -78,7 +78,9 @@
 </div>
 </div>
 
-<button class="mt-3 btn btn-danger" v-on:click="process">Delete</button>
+<button class="mt-3 btn btn-del" v-on:click="process">Delete</button>
+<button class="mt-3 btn btn-cancel" v-on:click="cancelButton">Cancel</button>
+
 
 </div>
 
@@ -113,8 +115,30 @@ methods:{
             );
             this.$emit("restaurant-delete");
         },
+        cancelButton: function(){
+            this.$emit("restaurant-cancel");
+        }
     },
 };
 </script>
 
-<style></style>
+<style>
+.btn-del{
+z-index: 10;
+  border-style:solid !important;
+  border-color:#EF4F5F !important;
+  background-color: #EF4F5F !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+.btn-cancel{
+    position: relative;
+    left: 10px;
+    z-index: 10;
+    border-style:solid !important;
+    border-color:#FAC7CC !important;
+    background-color: #FAC7CC !important;
+    color: #EF4F5F !important;
+    font-weight: bold !important;
+}
+</style>

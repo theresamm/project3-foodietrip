@@ -79,7 +79,8 @@
 </div>
 
 <p class="text-danger" v-if="errors.length"><b>Please fill out all fields to proceed</b></p>
-<button class="mt-3 btn btn-primary" v-on:click="process">Create</button>
+<button class="mt-3 btn btn-new" v-on:click="process">Create</button>
+<button class="mt-3 btn btn-cancel" v-on:click="cancelButton">Cancel</button>
 </div>
 </template>
 
@@ -131,6 +132,9 @@ export default {
             this.$emit('add-new-rest');
             }
         },
+        cancelButton: function(){
+            this.$emit("restaurant-cancel");
+        }
     },
 }
 </script>
@@ -138,5 +142,14 @@ export default {
 <style>
 .form-control{
     max-width: 700px!important;
+}
+
+.btn-new{
+    z-index: 10;
+    border-style:solid !important;
+    border-color:#EF4F5F !important;
+    background-color: #EF4F5F !important;
+    color: white !important;
+    font-weight: bold !important;
 }
 </style>
