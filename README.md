@@ -53,5 +53,15 @@
 <p>Wireframe diagrams can be found <a href = /src/assets/wireframe.png>here</a></p>
 
 <h4>Surface:</h4>
-<li>The website features a banner on the upper portion of the web page which also includes a search bar to easily find for the restaurants. It also displays three colors namely red, white and black. The red and white color are mainly used on the navigation bar. While the color black is used on the important details on the webpage. The app uses the font Trebuchet MS for all the details in the website as it looks clean and modern.</li>
+<li>The website features a banner on the upper portion of the web page which also includes a search bar to easily find for the restaurants. It also displays colors like pink, yellow, white and black. The red, pink and white colors are used on the navigation bars, all buttons and the whole webpage. The color yellow is mainly used on to indicate the ratings on each restaurant. While the color black is used on the relevant information of the restaurant. The app uses the font Trebuchet MS for all the details in the website as it looks clean and modern.</li>
+
+<h3>Features</h3>
+<li>The main feature of the website is to show all the restaurants posted by the users. </li>
+<li>It also displays brief information on each restaurants and their corresponding ratings. </li>
+<li>The complete details of a restaurant can be shown by clicking on the name of the restaurant</li>
+<li>The users can also search for a specific restaurant by using the search bar and type in the restaurant name or by filtering it by criteria like the type of cuisine. </li>
+<li>It can also create a new post of a restaurant by clicking on the New Restaurant link located on the navigation bar. The user can fill up the form and to ensure all the fields are completed the user will be prompted if there are any blank fields. Once the form has been completed and submitted the user will be redirected to the homepage. </li>
+<li>The post can be edited by clicking on the edit button displayed on each restaurant. The user can edit or replace the details on the form and click on the update button once completed. Cancel button is also available on the form and it will be redirected back to the home page. </li>
+<li>The user can delete a post by clicking on the delete button displayed on each restaurant. It will directed to a delete page to display and review the details before the user deletes a post. </li>
+
 
