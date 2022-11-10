@@ -14,8 +14,9 @@
 <div class="p-3"></div>
 
 <div class="filter-select">
-<form class="row g-2">
-<div class="col-md-5">
+<form class="filter-list row g-5">
+
+<div class="col-md-4">
 <label> Select type of cuisine: </label>
 <select class="filter-cuisine form-select" v-model="cuisine">
 <option value="">Select Cuisine</option>
@@ -27,6 +28,19 @@
 <option value="Korean">Korean</option>
 </select>
 </div>
+
+<div class="col-md-4">
+<label> Select rating: </label>
+<select class="filter-rating form-select" v-model="rating">
+<option value="">Select Rating</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+</div>
+
 
 </form>
 </div>
@@ -70,6 +84,8 @@ export default {
             restaurants: [],
             search: "",
             cuisine:"",
+            rating:"",
+            
         };
     },
     async created(){
@@ -95,6 +111,11 @@ export default {
             selection = selection.filter((r)=>{
             return r.cuisine.includes(this.cuisine)
             });
+           selection = selection.filter((r)=>{
+            if(this.rating){return r.rating == this.rating}
+            else {return true}
+            });
+
             return selection;
         },
     },
@@ -167,6 +188,7 @@ export default {
 }
 
 
+
 .card-border{
   border-style:solid;
   border-color:#FAC7CC;
@@ -191,10 +213,18 @@ color: #EF4F5F;
 .filter-select{
   color: #EF4F5F;
   font-weight: bold;
-  
+  position: relative;
 }
 
 .filter-cuisine{
+  border-style:solid !important;
+  border-color:#FAC7CC !important;
+  background-color: #EF4F5F !important;
+  color: white !important;
+  font-weight: bold !important;
+  border-width: 2px !important;
+}
+.filter-rating{
   border-style:solid !important;
   border-color:#FAC7CC !important;
   background-color: #EF4F5F !important;
