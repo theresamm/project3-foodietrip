@@ -2,7 +2,7 @@
 <div>
 <div class="edit-title"><h2>UPDATE RESTAURANT DETAILS</h2></div>
 <div class="mt-3">
-<label class="edit-labels form-labels">Restaurant Name : </label>
+<label class="form-labels">Restaurant Name : </label>
 <input type="text" class="form-control" v-model="restaurant.name"/>
 </div>
 
@@ -159,4 +159,5 @@ export default{
     font-weight: bold !important;
     font-family: Trebuchet MS, sans-serif;
 }
+
 </style>

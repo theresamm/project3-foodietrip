@@ -166,9 +166,6 @@ export default {
    text-align: center;
 }
 
-.card:hover{
-transform: scale(1.1);
-}
 
 .card-border{
   border-style:solid;
@@ -183,6 +180,7 @@ background-color: #EF4F5F !important;
 .card-title{
 color: #EF4F5F;
 }
+
 
 .card-title:hover{
   color: white;

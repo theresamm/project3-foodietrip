@@ -36,7 +36,9 @@
     v-on:restaurant-delete="changePage('restaurants')"
     v-on:restaurant-cancel="changePage('restaurants')"
     />
-    <SelectRest v-if="page === 'select'" v-bind:reviewId="restaurantSelect"/>
+    <SelectRest v-if="page === 'select'" v-bind:reviewId="restaurantSelect"
+    v-on:edit-rest="onEditRest" v-on:delete-rest="onDeleteRest"
+    />
     
     </div>
   </div>
