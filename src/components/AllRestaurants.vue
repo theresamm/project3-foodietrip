@@ -204,4 +204,5 @@ color: #EF4F5F;
   font-weight: bold !important;
   border-width: 2px !important;
 }
+
 </style>

@@ -112,7 +112,7 @@ export default {
         async process(){
             this.errors = [];
             if (!this.name || !this.cuisine || !this.location || !this.image || !this.bestseller || !this.meals || !this.average_cost || !this.store_hours || !this.features || !this.parking || !this.contact || !this.rating){
-                this.errors.push("Required fields");
+                this.errors.push("Empty fields");
             } else {
             const newRest = {
                 name: this.name,

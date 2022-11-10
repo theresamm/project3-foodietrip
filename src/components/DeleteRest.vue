@@ -1,6 +1,6 @@
 <template>
 <div>
-<h2>Delete Restaurant</h2>
+<div class="delete-title"><h2>DELETE RESTAURANT</h2></div>
 <div class="mt-3">
 <label class="form-labels">Restaurant Name : </label>
 <input type="text" class="form-control" v-model="restaurant.name"/>
@@ -107,6 +107,14 @@ methods:{
                 name: this.restaurant.name,
                 cuisine: this.restaurant.cuisine,
                 location: this.restaurant.location,
+                image: this.restaurant.image,
+                bestseller: this.restaurant.bestseller,
+                meals: this.restaurant.meals,
+                average_cost: this.restaurant.average_cost,
+                store_hours: this.restaurant.store_hours,
+                features: this.restaurant.features,
+                parking: this.restaurant.parking,
+                contact: this.restaurant.contact,
                 rating: this.restaurant.rating
             };
             await axios.delete(
@@ -123,6 +131,16 @@ methods:{
 </script>
 
 <style>
+.delete-title{
+    color: #EF4F5F;
+    background-color: #FAC7CC;
+    font-weight: 900 !important;
+    font-family: Trebuchet MS, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius:20px;
+}
 .btn-del{
 z-index: 10;
   border-style:solid !important;
@@ -141,4 +159,6 @@ z-index: 10;
     color: #EF4F5F !important;
     font-weight: bold !important;
 }
+
+
 </style>

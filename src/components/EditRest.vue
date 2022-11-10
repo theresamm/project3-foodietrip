@@ -1,8 +1,8 @@
 <template>
 <div>
-<h2>Update Restaurant</h2>
+<div class="edit-title"><h2>UPDATE RESTAURANT DETAILS</h2></div>
 <div class="mt-3">
-<label class="form-labels">Restaurant Name : </label>
+<label class="edit-labels form-labels">Restaurant Name : </label>
 <input type="text" class="form-control" v-model="restaurant.name"/>
 </div>
 
@@ -78,7 +78,7 @@
 </div>
 </div>
 
-
+<p class="text-danger" v-if="errors.length"><b>Please fill out all fields to proceed</b></p>
 <button class="mt-3 btn btn-update" v-on:click="process">Update</button>
 <button class="mt-3 btn btn-cancel" v-on:click="cancelButton">Cancel</button>
 
@@ -98,10 +98,15 @@ export default{
     data:function (){
         return{
             restaurant:{},
+            errors: []
         };
     },
     methods:{
         async process(){
+            this.errors = [];
+            if (!this.restaurant.name || !this.restaurant.cuisine || !this.restaurant.location || !this.restaurant.image || !this.restaurant.bestseller || !this.restaurant.meals || !this.restaurant.average_cost || !this.restaurant.store_hours || !this.restaurant.features || !this.restaurant.parking || !this.restaurant.contact || !this.restaurant.rating){
+                this.errors.push("Empty fields");
+            } else {
             const updatedRest = {
                 name: this.restaurant.name,
                 cuisine: this.restaurant.cuisine,
@@ -116,11 +121,10 @@ export default{
                 contact: this.restaurant.contact,
                 rating: this.restaurant.rating
             };
-            await axios.put(
-                baseAPI + "restaurants/" + this.reviewId,
-                updatedRest
-            );
+            await axios.put(baseAPI + "restaurants/" + this.reviewId,
+                updatedRest);
             this.$emit("restaurant-update");
+            }
         },
         cancelButton: function(){
             this.$emit("restaurant-cancel");
@@ -130,6 +134,18 @@ export default{
 </script>
 
 <style>
+.edit-title{
+    color: #EF4F5F ;
+    font-weight: bold !important;
+    font-family: Trebuchet MS, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+    border-style:solid !important;
+    border-color: #EF4F5F !important;
+    border-width: 5px !important;
+    border-radius:20px;
+}
 .btn-update{
     z-index: 10;
     border-style:solid !important;
@@ -137,5 +153,10 @@ export default{
     border-width: 2px !important;
     color: #EF4F5F !important;
     font-weight: bold !important;
+}
+.form-labels{
+    color: #EF4F5F ;
+    font-weight: bold !important;
+    font-family: Trebuchet MS, sans-serif;
 }
 </style>
