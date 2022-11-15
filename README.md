@@ -78,5 +78,5 @@
 | Test Case No. |  Test Case Description  |         Test Steps         |         Expected Results         |
 |:--------------|:------------------------|:---------------------------|:---------------------------------|
 |1 | Test if the navbar links works | Click on the ‘Home’ or ‘New Restaurant’ links on Navbar | The ‘Home’ link would display the list of restaurants from the API while the ‘New Restaurant’ link will be directed to a new page to post a new restaurant |
-
+|2 | Search for a restaurant | Type in a restaurant name on the search bar field | 1. Card/s will show the restaurant that matches the name typed in the search field. <br> 2. Number of results will be displayed |
 
