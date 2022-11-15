@@ -74,7 +74,9 @@
 <li>Yarn and NPM – Used to run the single page application</li>
 
 <h3>Testing</h3>
+
 | Test Case No. |  Test Case Description  |         Test Steps         |         Expected Results         |
-|---------------|-------------------------|----------------------------|----------------------------------|
-|1| Test if the navbar links works | Click on the ‘Home’ or ‘New Restaurant’ links on Navbar | The ‘Home’ link would display the list of restaurants from the API while the ‘New Restaurant’ link will be directed to a new page to post a new restaurant. |
+|:--------------|:------------------------|:---------------------------|:---------------------------------|
+|1 | Test if the navbar links works | Click on the ‘Home’ or ‘New Restaurant’ links on Navbar | The ‘Home’ link would display the list of restaurants from the API while the ‘New Restaurant’ link will be directed to a new page to post a new restaurant |
+
 
