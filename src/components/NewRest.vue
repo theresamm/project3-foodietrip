@@ -1,6 +1,6 @@
 <template>
 <div>
-<h2>New Restaurant</h2>
+<div class="newrest-title"><h2>POST NEW RESTAURANT</h2></div>
 <div class="mt-3">
 <label class="form-labels">Restaurant Name : </label>
 <input type="text" class="form-control" v-model="name" placeholder="Name"/>
@@ -81,6 +81,7 @@
 <p class="text-danger" v-if="errors.length"><b>Please fill out all fields to proceed</b></p>
 <button class="mt-3 btn btn-new" v-on:click="process">Create</button>
 <button class="mt-3 btn btn-cancel" v-on:click="cancelButton">Cancel</button>
+<div class="p-3"></div>
 </div>
 </template>
 
@@ -140,6 +141,18 @@ export default {
 </script>
 
 <style>
+
+.newrest-title{
+    color: white;
+    background-color: #EF4F5F;
+    font-weight: 900 !important;
+    font-family: Trebuchet MS, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius:20px;
+}
+
 .form-control{
     max-width: 700px!important;
 }
@@ -151,5 +164,8 @@ export default {
     background-color: #EF4F5F !important;
     color: white !important;
     font-weight: bold !important;
+}
+.btn-new:hover{
+  transform: scale(1.2);
 }
 </style>

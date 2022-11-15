@@ -81,7 +81,7 @@
 <p class="text-danger" v-if="errors.length"><b>Please fill out all fields to proceed</b></p>
 <button class="mt-3 btn btn-update" v-on:click="process">Update</button>
 <button class="mt-3 btn btn-cancel" v-on:click="cancelButton">Cancel</button>
-
+<div class="p-3"></div>
 </div>
 </template>
 
@@ -154,6 +154,11 @@ export default{
     color: #EF4F5F !important;
     font-weight: bold !important;
 }
+
+.btn-update:hover{
+  transform: scale(1.2);
+}
+
 .form-labels{
     color: #EF4F5F ;
     font-weight: bold !important;

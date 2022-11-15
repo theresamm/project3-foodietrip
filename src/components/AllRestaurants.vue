@@ -6,7 +6,7 @@
 <h1>Foodie Trip</h1>
 <h4>Discover the best restaurants in the Philippines</h4>
 <div class="search-name">
-<input type="text" v-model="search" placeholder="Search Restaurant Name"/>
+<input type="text" v-model="search" placeholder="Search for Restaurant"/>
 </div>
 </div>
 </div>
@@ -14,7 +14,7 @@
 <div class="p-3"></div>
 
 <div class="filter-select">
-<form class="filter-list row g-5">
+<form class="filter-list row g-4">
 
 <div class="col-md-4">
 <label> Select type of cuisine: </label>
@@ -41,8 +41,12 @@
 </select>
 </div>
 
-
+<div class="col-md-4">
+<div class="p-2"></div>
+<div class ="filter-total"><h4> {{filterTotal}} Restaurants Displayed </h4> </div>
+</div>
 </form>
+
 </div>
 
 
@@ -54,7 +58,7 @@
     <div class="col-md-5">
       <img v-bind:src="r.image" class="img-fluid rounded-start" alt="">
     </div>
-    <div class="col-md-4">
+    <div class="col-md-7">
       <div class="card-body">
         <h4><a class="card-title" v-on:click="sel(r._id)" href="#">{{r.name}}</a></h4>
         <h5>Cuisine: <span class="badge rounded-pill badge-cuisine">{{r.cuisine}}</span></h5>
@@ -118,6 +122,9 @@ export default {
 
             return selection;
         },
+        filterTotal: function(){
+          return this.searchRes.length
+        }
     },
 };
 </script>
@@ -145,6 +152,7 @@ export default {
     border:none;
     position: center;
     border-radius:20px;
+    text-align: center !important;
 }
 
 .badge-rating{
@@ -169,6 +177,10 @@ export default {
   font-weight: bold !important;
 }
 
+.btn-edit:hover{
+  transform: scale(1.2);
+}
+
 .btn-delete{
   position: absolute;
   bottom:10px;
@@ -180,19 +192,15 @@ export default {
   color: white !important;
   font-weight: bold !important;
 }
-
-
-.form-select{
-  position: center;
-   text-align: center;
+.btn-delete:hover{
+  transform: scale(1.2);
 }
 
 
-
 .card-border{
-  border-style:solid;
+  border-style:none;
   border-color:#FAC7CC;
- 
+  
 }
 
 .badge-cuisine{
@@ -201,20 +209,32 @@ background-color: #EF4F5F !important;
 
 .card-title{
 color: #EF4F5F;
+text-decoration: none;
 }
 
 
 .card-title:hover{
-  color: white;
-  background-color: #EF4F5F;
-  padding: 5px;
+  text-decoration:underline;
+  color: #EF4F5F;
+  
+}
+.form-select{
+   display: block;
+  position: center !important;
+   text-align: center;
 }
 
 .filter-select{
   color: #EF4F5F;
   font-weight: bold;
-  position: relative;
+ 
 }
+.filter-total{
+ display: block;
+  position: center !important;
+   text-align: center;
+}
+
 
 .filter-cuisine{
   border-style:solid !important;
@@ -223,6 +243,8 @@ color: #EF4F5F;
   color: white !important;
   font-weight: bold !important;
   border-width: 2px !important;
+  position: center !important;
+  
 }
 .filter-rating{
   border-style:solid !important;

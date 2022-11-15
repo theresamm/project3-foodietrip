@@ -80,7 +80,7 @@
 
 <button class="mt-3 btn btn-del" v-on:click="process">Delete</button>
 <button class="mt-3 btn btn-cancel" v-on:click="cancelButton">Cancel</button>
-
+<div class="p-3"></div>
 
 </div>
 
@@ -149,6 +149,9 @@ z-index: 10;
   color: white !important;
   font-weight: bold !important;
 }
+.btn-del:hover{
+  transform: scale(1.2);
+}
 .btn-cancel{
     position: relative;
     left: 10px;
@@ -158,6 +161,9 @@ z-index: 10;
     background-color: #FAC7CC !important;
     color: #EF4F5F !important;
     font-weight: bold !important;
+}
+.btn-cancel:hover{
+  transform: scale(1.2);
 }
 
 
