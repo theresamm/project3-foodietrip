@@ -58,10 +58,19 @@
 <h3>Features</h3>
 <li>The main feature of the website is to show all the restaurants posted by the users. </li>
 <li>It also displays brief information on each restaurants and their corresponding ratings. </li>
-<li>The complete details of a restaurant can be shown by clicking on the name of the restaurant</li>
-<li>The users can also search for a specific restaurant by using the search bar and type in the restaurant name or by filtering it by criteria like the type of cuisine. </li>
-<li>It can also create a new post of a restaurant by clicking on the New Restaurant link located on the navigation bar. The user can fill up the form and to ensure all the fields are completed the user will be prompted if there are any blank fields. Once the form has been completed and submitted the user will be redirected to the homepage. </li>
-<li>The post can be edited by clicking on the edit button displayed on each restaurant. The user can edit or replace the details on the form and click on the update button once completed. Cancel button is also available on the form and it will be redirected back to the home page. </li>
-<li>The user can delete a post by clicking on the delete button displayed on each restaurant. It will directed to a delete page to display and review the details before the user deletes a post. </li>
+<li>The complete details of a restaurant can be shown by clicking on the name of the restaurant.</li>
+<li>The users can also search for a specific restaurant by using the search bar and type in the restaurant name or by filtering it by criteria like the type of cuisine and ratings. </li>
+<li>It can also create a new post of a restaurant by clicking on the New Restaurant link located on the navigation bar. The user can fill up the form and to ensure all the fields are completed the user will be prompted if there are any blank fields in the form. Once the form has been completed and submitted the user will be redirected to the homepage. </li>
+<li>The post can be edited by clicking on the edit button displayed on each restaurant. The user can edit or replace the details on the form and click on the update button once completed. To ensure all the fields are completed the user will be prompted if there are any blank fields in the form. Cancel button is also available on the form and it will be redirected back to the home page. </li>
+<li>The user can delete a post by clicking on the delete button displayed on each restaurant. It will directed to a delete page to display and review the details before the user deletes a post. Cancel button is also available on the form and it will be redirected back to the home page. </li>
+<li>Additional feature which is yet to be implemented would be to enable JWT token authentication. This would allow the users to create an account and to log in first before they could create, edit and delete a post. </li>
+
+<h3>Technologies Used</h3>
+<li>Bootstrap 5.1 - Used to create the navbar and buttons.</li>
+<li>Javascript - To create interactive web applications.</li>
+<li>Vue 3 – Used to create an interactive single page web application</li>
+<li>MongoDB and Express – Storage of API endpoints database</li>
+<li>Axios – To extract API endpoints</li>
+<li>Yarn and NPM – Used to run the single page application</li>
 
 
