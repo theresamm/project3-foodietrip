@@ -89,9 +89,18 @@
 <ul>
 <li>Icon - https://www.flaticon.com/free-icons/restaurant Restaurant icons created by Konkapp - Flaticon</li>
 <li>Banner photo - Photo by Antony Trivet: https://www.pexels.com/photo/variety-of-foods-on-black-ceramic-plates-13354577/</li>
-<li>Food images: </li>
+<li>Food images: Pexels.com</li>
 <ul class=imglist>
 <li> Photo by Bea Dela Cruz: https://www.pexels.com/photo/close-up-photo-of-cooked-dish-on-white-ceramic-plate-12594202/ </li>
+<li> Photo by Aleksey Bystrov: https://www.pexels.com/photo/delicious-burger-and-fries-serving-13163534/ </li>
+<li>Photo by Maria  Bortolotto : https://www.pexels.com/photo/tasty-italian-pasta-with-spinach-leaves-and-grated-cheese-6382782/</li>
+<li>Photo by Wallace Araujo: https://www.pexels.com/photo/close-up-shot-of-a-risotto-9058939/</li>
+<li>Photo by Dana Tentis: https://www.pexels.com/photo/cooked-foods-750073/</li>
+<li>Photo by Rajesh TP: https://www.pexels.com/photo/cooked-pasta-near-shrimp-tempura-2098131/</li>
+<li>Photo by Becerra Govea Photo: https://www.pexels.com/photo/top-view-of-soju-and-a-variety-of-korean-food-5773968/</li>
 </ul>
 </ul>
+<h3>Acknowledgement</h3>
+<li>I would like to express my gratitude to all the teachers who guided me and provided advice in completing the project.</li>
+
 
