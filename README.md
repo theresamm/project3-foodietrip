@@ -90,7 +90,8 @@
 <li>Icon - https://www.flaticon.com/free-icons/restaurant Restaurant icons created by Konkapp - Flaticon</li>
 <li>Banner photo - Photo by Antony Trivet: https://www.pexels.com/photo/variety-of-foods-on-black-ceramic-plates-13354577/</li>
 <li>Food images: </li>
-&nbsp<li> Photo by Bea Dela Cruz: https://www.pexels.com/photo/close-up-photo-of-cooked-dish-on-white-ceramic-plate-12594202/ </li>
-
+<ul class=imglist>
+<li> Photo by Bea Dela Cruz: https://www.pexels.com/photo/close-up-photo-of-cooked-dish-on-white-ceramic-plate-12594202/ </li>
+</ul>
 </ul>
 

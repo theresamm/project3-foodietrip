@@ -142,4 +142,8 @@ color: white !important;
   border: none;
 }
 
+.imglist{
+  list-style-position: inside;
+}
+
 </style>
