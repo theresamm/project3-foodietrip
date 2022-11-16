@@ -79,7 +79,7 @@
 </div>
 
 <p class="text-danger" v-if="errors.length"><b>Please fill out all fields to proceed</b></p>
-<button class="mt-3 btn btn-new" v-on:click="process">Create</button>
+<button class="mt-3 btn btn-new" v-on:click="process">Submit</button>
 <button class="mt-3 btn btn-cancel" v-on:click="cancelButton">Cancel</button>
 <div class="p-3"></div>
 </div>
