@@ -86,7 +86,11 @@
 |7 | To delete a restaurant post | 1. Click on the delete button on the lower right portion of a restaurant card. <br> 2. Select a specific restaurant first and the user will be directed on the selected restaurant page then click on the delete button found on the lower right portion of the page. <br> 3. Once the delete button has been clicked the user will be directed on the selected restaurant delete page to confirm deletion of the post. <br> 4. Click on the cancel button. | 1. When the user confirmed the deletion of a post by clicking on the delete button, the user will be redirected back to the ‘Home’ page. The deleted post will no longer appear both on the restful API and mongoDB database. <br> 2. If the cancel button is clicked the user will redirected back to the ‘Home’ page. |
 
 <h3>Credits</h3>
+<ul>
 <li>Icon - https://www.flaticon.com/free-icons/restaurant Restaurant icons created by Konkapp - Flaticon</li>
 <li>Banner photo - Photo by Antony Trivet: https://www.pexels.com/photo/variety-of-foods-on-black-ceramic-plates-13354577/</li>
 <li>Food images: </li>
-<br> <li> Photo by Bea Dela Cruz: https://www.pexels.com/photo/close-up-photo-of-cooked-dish-on-white-ceramic-plate-12594202/ </li>
+<li style=”padding-left:20px”> Photo by Bea Dela Cruz: https://www.pexels.com/photo/close-up-photo-of-cooked-dish-on-white-ceramic-plate-12594202/ </li>
+
+</ul>
+
