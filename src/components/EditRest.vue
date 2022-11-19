@@ -78,7 +78,7 @@
 </div>
 </div>
 
-<p class="text-danger" v-if="errors.length"><b>Please fill out all fields to proceed</b></p>
+<div class="field-error" v-if="errors.length"></div>
 <button class="mt-3 btn btn-update" v-on:click="process">Update</button>
 <button class="mt-3 btn btn-cancel" v-on:click="cancelButton">Cancel</button>
 <div class="p-3"></div>
@@ -106,6 +106,13 @@ export default{
             this.errors = [];
             if (!this.restaurant.name || !this.restaurant.cuisine || !this.restaurant.location || !this.restaurant.image || !this.restaurant.bestseller || !this.restaurant.meals || !this.restaurant.average_cost || !this.restaurant.store_hours || !this.restaurant.features || !this.restaurant.parking || !this.restaurant.contact || !this.restaurant.rating){
                 this.errors.push("Empty fields");
+                this.$toast.open({
+                message: "Please fill out all fields to proceed!",
+                type: "warning",
+                duration: 5000,
+                dismissible: true,
+                position: "bottom"
+                })
             } else {
             const updatedRest = {
                 name: this.restaurant.name,

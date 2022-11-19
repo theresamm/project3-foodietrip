@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+
+  
   <nav class="navbar navbar-expand-lg">
   <div class="navbar-bar container-fluid">
     <a class="navbar-brand" href="#"><img src="./assets/icon.png" alt="Restaurant icons created by Konkapp - Flaticon">FOODIE TRIP</a>
@@ -21,19 +23,20 @@
 
 
 <div class="container">
+
     <AllRestaurants v-if="page === 'restaurants'"
     v-on:edit-rest="onEditRest" v-on:delete-rest="onDeleteRest" v-on:select-rest="onSelectRest"/>
-    <NewRest v-if="page === 'add'" v-on:add-new-rest="changePage('restaurants')"
+    <NewRest v-if="page === 'add'" v-on:add-new-rest="RestNew"
     v-on:restaurant-cancel="changePage('restaurants')"
     />
     <EditRest v-if="page === 'edit'"
     v-bind:reviewId="restaurantUpdate"
-    v-on:restaurant-update="changePage('restaurants')"
+    v-on:restaurant-update="RestEdited"
     v-on:restaurant-cancel="changePage('restaurants')"
     />
     <DeleteRest v-if="page === 'delete'"
     v-bind:reviewId="restaurantDelete"
-    v-on:restaurant-delete="changePage('restaurants')"
+    v-on:restaurant-delete="RestDeleted"
     v-on:restaurant-cancel="changePage('restaurants')"
     />
     <SelectRest v-if="page === 'select'" v-bind:reviewId="restaurantSelect"
@@ -74,18 +77,52 @@ export default {
   methods: {
     changePage(newPage){
       this.page = newPage;
+      
+    },
+    RestNew(){
+      this.page = "restaurants";
+      this.$toast.open({
+        message: "New Restaurant Succesfully Added",
+        type: "success",
+        duration: 5000,
+        dismissible: true,
+        position: "bottom"
+      })
     },
     onEditRest(reviewId){
       this.restaurantUpdate = reviewId;
       this.changePage("edit");
+      
+    },
+    RestEdited(){
+      this.page = "restaurants";
+      this.$toast.open({
+        message: "Restaurant Succesfully Updated",
+        type: "success",
+        duration: 5000,
+        dismissible: true,
+        position: "bottom"
+      })
     },
     onDeleteRest(reviewId){
       this.restaurantDelete = reviewId;
       this.changePage("delete");
+      this.confirm = "";
+    },
+    RestDeleted(){
+      this.page = "restaurants";
+      this.$toast.open({
+        message: "Restaurant Succesfully Deleted",
+        type: "error",
+        duration: 5000,
+        dismissible: true,
+        position: "bottom"
+      })
     },
     onSelectRest(reviewId){
       this.restaurantSelect = reviewId;
       this.changePage("select");
+      this.confirm = "";
     },
   },
 };
