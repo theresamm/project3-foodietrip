@@ -97,7 +97,7 @@
 <li>Photo by Maria  Bortolotto : https://www.pexels.com/photo/tasty-italian-pasta-with-spinach-leaves-and-grated-cheese-6382782/</li>
 <li>Photo by Wallace Araujo: https://www.pexels.com/photo/close-up-shot-of-a-risotto-9058939/</li>
 <li>Photo by Dana Tentis: https://www.pexels.com/photo/cooked-foods-750073/</li>
-<li>Photo by Rajesh TP: https://www.pexels.com/photo/cooked-pasta-near-shrimp-tempura-2098131/</li>
+<li>Photo by Rajesh TP: https://www.pexels.com/photo/sushi-on-brown-wooden-board-2098085/</li>
 <li>Photo by Becerra Govea Photo: https://www.pexels.com/photo/top-view-of-soju-and-a-variety-of-korean-food-5773968/</li>
 </ul>
 </ul>
