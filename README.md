@@ -4,7 +4,7 @@
 <h2>PROJECT SUMMARY</h2>
 <p> The Foodie Trip website aims to share and provide information to the users on the restaurants and food establishments in the Philippines. It enables the users to explore and search for new restaurants and to share their experiences and relative information for other users.</p>
 
-<p>Here is the deployed live link website: <a href ="https:// /">link</a></p>
+<p>Here is the deployed link website: <a href ="http://localhost:8080/">link</a></p>
 
 <h2>UX/UI</h2>
 
@@ -89,7 +89,7 @@
 <h3>Credits</h3>
 <ul>
 <li>Icon - https://www.flaticon.com/free-icons/restaurant Restaurant icons created by Konkapp - Flaticon</li>
-<li>Vue Toast Notification - Sourced from https://github.com/ankurk91/vue-toast-notification </li>
+<li>Vue Toast Notification - Sourced from the repository https://github.com/ankurk91/vue-toast-notification </li>
 <li>Banner photo - Photo by Antony Trivet: https://www.pexels.com/photo/variety-of-foods-on-black-ceramic-plates-13354577/</li>
 <li>Food images: Pexels.com</li>
 <ul class=imglist>
