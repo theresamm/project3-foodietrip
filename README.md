@@ -89,6 +89,7 @@
 <h3>Credits</h3>
 <ul>
 <li>Icon - https://www.flaticon.com/free-icons/restaurant Restaurant icons created by Konkapp - Flaticon</li>
+<li>Vue Toast Notification - Sourced from https://github.com/ankurk91/vue-toast-notification </li>
 <li>Banner photo - Photo by Antony Trivet: https://www.pexels.com/photo/variety-of-foods-on-black-ceramic-plates-13354577/</li>
 <li>Food images: Pexels.com</li>
 <ul class=imglist>
