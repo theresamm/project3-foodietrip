@@ -99,8 +99,10 @@
 <li>Photo by Wallace Araujo: https://www.pexels.com/photo/close-up-shot-of-a-risotto-9058939/</li>
 <li>Photo by Dana Tentis: https://www.pexels.com/photo/cooked-foods-750073/</li>
 <li>Photo by Rajesh TP: https://www.pexels.com/photo/sushi-on-brown-wooden-board-2098085/</li>
-<li>Photo by Becerra Govea Photo: https://www.pexels.com/photo/top-view-of-soju-and-a-variety-of-korean-food-5773968/</li>
-<li>Photo by Ruslan Khmelevsky from Pexels: https://www.pexels.com/photo/close-up-photo-of-a-delicious-cooked-escargots-5388704/</li>
+<li>Photo by Becerra Govea Photo: https://www.pexels.com/photo/top-view-of-soju-and-a-variety-of-korean-food-5773969/</li>
+<li>Photo by Ruslan Khmelevsky from Pexels: https://www.pexels.com/photo/close-up-photo-of-a-delicious-cooked-escargots-5388689/</li>
+<li>Photo by ROMAN ODINTSOV from Pexels: https://www.pexels.com/photo/tasty-cold-cappuccino-and-matcha-latte-served-with-chocolate-pie-4552124/</li>
+<li>Photo by Na Urchin from Pexels: https://www.pexels.com/photo/berry-dessert-2377173/</li>
 </ul>
 </ul>
 <h3>Acknowledgement</h3>
