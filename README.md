@@ -4,7 +4,8 @@
 <h2>PROJECT SUMMARY</h2>
 <p> The Foodie Trip website aims to share and provide information to the users on the restaurants and food establishments in the Philippines. It enables the users to explore and search for new restaurants and to share their experiences and relative information for other users.</p>
 
-<p>Here is the deployed link website: <a href ="http://localhost:8080/">link</a></p>
+<p>Here is the deployed link website: <a href ="https://theresamm.github.io/project3-foodietrip/">link</a></p>
+<p>Github repository for API Express: "https://github.com/theresamm/proj2-api"</p>
 
 <h2>UX/UI</h2>
 
