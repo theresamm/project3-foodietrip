@@ -17,7 +17,7 @@
     <h5>Meals: <span class v-for="(meals, index) in restaurants.meals" :key="index">{{meals}}, </span></h5>
     <h5>Contacts: <span class v-for="(contact, index) in restaurants.contact" :key="index">{{contact}} </span></h5>
   <h5 class="card-text">Features: {{restaurants.features}}</h5>
-  <h5 class="card-text">Parking: {{restaurants.parking}}</h5>
+  <h5>Parking: <span class v-for="(parking, index) in restaurants.parking" :key="index">{{parking}}</span></h5>
   <button class="mt-3 btn btn-sm btn-edit" v-on:click="edit(restaurants._id)">Edit</button><button class="mt-3 ms-2 btn btn-sm btn-delete" v-on:click="del(restaurants._id)">Delete</button>
 </div>
 </div>
